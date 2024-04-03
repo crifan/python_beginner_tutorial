@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch03_python_install">
+<title>如何安装Python</title>
+<abstract>
+    <para>本章主要讲解，在下载了合适的版本的Python后，图文并茂的介绍如何去安装Python。</para>
+    <para></para>
+</abstract>
+
+<para>在下载完毕Python后，就是去安装Python了。</para>
+<para></para>
+
+<sect1 xml:id="how_install_python_in_win"><title>如何在Windows系统中安装Python</title>
+    <para>Windows系列操作系统，有很多不同版本，</para>
+    <para>目前主流的，最常用的有Windows XP,Windows 7，Windows 8</para>
+    <sect2 xml:id="install_python_in_win7"><title>在Win7中安装Python</title>
+        <para>下面以Windows 7为例，来解释如何在Windows中安装Python</para>
+        <para>待整理：</para>
+        <para><link xl:href="http://www.crifan.com/tutorial_how_to_install_python_on_windows">【教程】如何在Windows系统中安装Python</link></para>
+        <para></para>
+        <para>其中最重要的一点是：最好安装的路径中，不要包含中文</para>
+        <para>是为了避免以后可能出现的，在Python开发期间，由于中文路径，而导致的一些问题</para>
+    </sect2>
+</sect1>
+
+<sect1 xml:id="how_install_python_in_linux"><title>如何在Linux系统中安装Python</title>
+    <para>Linux系统是个统称</para>
+    <para>其有很多所谓的发行版，</para>
+    <para>其中目前相对比较流行一些有：（较早的）RedHat（红帽子），OpenSUSE，以及后来出现的Ubuntu，等等</para>
+
+    <sect2 xml:id="install_python_in_ubuntu"><title>在Ubuntu中安装Python</title>
+        <para>好像是：由于Linux类的系统中，包括Ubuntu，很多内置的工具和服务，都是Python代码写的。</para>
+        <para>所以，为了保证系统的正常运行，保证不影响当前自己的Linux系统，</para>
+        <para>最好不要卸载旧版本的Python，</para>
+        <para>而是在Linux类系统中自带的，已有的Python基础上，安装另外一个，相对最新的Python</para>
+        <para>当然，其实如何只是为了学习Python，尤其是对于Python初学者来说，其实不必再安装另外一个版本的系统</para>
+        <para>此处，只是为了，对于以后觉得有必要的时候，比如需要更新版本的Python，利用其中更好的功能等，而去安装另外一个更新版本的Python</para>
+        <para>下面就来解释，如何在Linux类系统中，安装另外一个，更新版本的Python</para>
+        <para></para>
+        <para></para>
+    </sect2>
+</sect1>
+
+<sect1 xml:id="how_install_python_in_mac"><title>如何在Mac中安装Python</title>
+    <para>由于Mac系统的基本架构，和Linux系统，比较类似</para>
+    <para>所以，关于如何在Mac上安装Python</para>
+    <para>其实是和上面已经介绍的，在Linux中安装Python，其原理和步骤，都是类似的</para>
+    <para></para>
+    <para></para>
+</sect1>
+
+</chapter>

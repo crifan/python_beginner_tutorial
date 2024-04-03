@@ -1,0 +1,684 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch04_python_dev_env">
+<title>选择合适的Python开发环境</title>
+<abstract>
+    <para>本章主要讲解，在安装了Python之后，针对开发环境的概念，进行深入浅出的介绍，</para>
+    <para>最原始的开发环境以及常见的IDE开发环境的关系如何，以便使得读者真正了解到各种开发环境的内在关系和优缺点，</para>
+    <para>才能真正帮助读者选择合适自己的开发环境，提高自己的开发效率。</para>
+    <para></para>
+</abstract>
+
+<tip xml:id="tip.python_dev_env"><title>相关旧帖</title>
+    <para><link xl:href="http://www.crifan.com/simple_intro_what_is_python_and_how_to_run_python_script">【整理】Python语言简介</link></para>
+    <para><link xl:href="http://www.crifan.com/summary_common_python_ide_pyscripter_ulipad_eclipse_pydev_eric">【整理】各种Python的IDE(集成开发环境)的总结和对比</link></para>
+    <para><link xl:href="http://www.crifan.com/try_with_python_ide_pyscripter">【记录】使用Python的IDE：PyScripter</link></para>
+    <para><link xl:href="http://www.crifan.com/pyscripter_start_error_python_could_not_be_properly_initialized_we_must_quit">【已解决】PyScripter启动出错：Python could not be properly initialized. We must quit.</link></para>
+    <para><link xl:href="http://www.crifan.com/try_with_python_ide_ulipad">【记录】使用Python的IDE：Ulipad</link></para>
+    <para><link xl:href="http://www.crifan.com/ulipad_after_install_finish_not_launch">【已解决】安装Ulipad后，选择启动Ulipad，结果无法启动</link></para>
+    <para><link xl:href="http://www.crifan.com/try_with_python_ide_eclipse_pydev">【记录】使用Python的IDE：Eclipse+PyDev</link></para>
+    <para><link xl:href="http://www.crifan.com/eclipse_install_plugin_pydev">【教程】在Eclipse中安装PyDev</link></para>
+    <para><link xl:href="http://www.crifan.com/eclipse_configure_newly_installed_plugin_pydev">【教程】在Eclipse中配置刚安装好的PyDev插件</link></para>
+    <para><link xl:href="http://www.crifan.com/eclipse_use_pydev_develop_python">【教程】在Eclipse中使用PyDev进行Python开发</link></para>
+    <para><link xl:href="http://www.crifan.com/eclipse_pydev_change_ugly_zhcn_char_to_another_font">【已解决】把Eclipse中的PyDev中的Python代码中的很难看的中文换个好看点的字体</link></para>
+    <para><link xl:href="http://www.crifan.com/eclipse_pydev_python_unexpected_io_exception_in_pydev_debugger">【已解决】Eclipse+PyDev无法调试Python：Unexpected IO Exception in Pydev debugger</link></para>
+    <para><link xl:href="http://www.crifan.com/try_dev_ide_aptana_studio_3">【记录】折腾IDE工具：Aptana Studio 3</link></para>
+    <para><link xl:href="http://www.crifan.com/apatana_studio_3_auto_config_pydev_error_java_io_ioexception_cannot_run_program_python_createprocess_error_2">【已解决】Aptana Studio 3中通过Auto Config配置PyDev中Python出错：java.io.IOException: Cannot run program "python": CreateProcess error=2, The system cannot find the file specified</link></para>
+</tip>
+
+<sect1 xml:id="how_dev_python_in_window"><title>如何在Windows环境下开发Python</title>
+    <para>此部分内容的目的：</para>
+    <para>希望对于，如何在Windows下，写Python代码，进行Python开发，运行Python脚本的人，看了此部分内容后，懂得了：</para>
+    <itemizedlist>
+        <listitem>什么是cmd下面去运行Python脚本</listitem>
+        <listitem>什么是Python的交互式的shell</listitem>
+        <listitem>什么是Python的IDE</listitem>
+    </itemizedlist>
+    <para></para>
+    <para>看此部分内容之前，需要具有以下前提：</para>
+    <itemizedlist>
+        <listitem>Python语言的基本知识
+            <para>包括知道其代码就是普通文本等基础知识</para>
+            <para>不了解的，可以先去看：</para>
+            <para><link xl:href="http://www.crifan.com/computer_language_basic_knowledge_introduction">【整理】计算机语言基础知识介绍</link></para>
+            <para>以了解关于计算机语言的宏观介绍；</para>
+            <para>再去看：</para>
+            <para><link xl:href="http://www.crifan.com/simple_intro_what_is_python_and_how_to_run_python_script">【整理】Python语言简介</link></para>
+            <para>就明白了。</para>
+            <para></para>
+        </listitem>
+        <listitem>已经在Windows中安装好了Python
+            <para>关于此部分内容，详见：</para>
+            <para><xref linkend="ch03_python_install" /></para>
+            <para></para>
+            <para>另外提示一下，关于版本的选择：</para>
+            <para><link xl:href="http://www.crifan.com/summary_the_difference_between_python2_and_python3">【整理】总结Python2(Python 2.x版本）和Python3（Python 3.x版本）之间的区别</link></para>
+            <para></para>
+        </listitem>
+    </itemizedlist>
+    <para>下面，通过最简单的Python代码,此处只是打印一些Python版本信息和系统信息：</para>
+    <programlisting language="python">
+<![CDATA[
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+Function:
+【整理】如何在Windows下开发Python（如何运行Python脚本）
+ 
+http://www.crifan.com/how_to_do_python_development_under_windows_environment
+ 
+Author:     Crifan Li
+Version:    2012-12-06
+"""
+  
+import platform;
+  
+pythonVersion = platform.python_version();
+uname = platform.uname();
+  
+print "Just for demo how to do python development under windows:";
+print "Current python version info is %s"%(pythonVersion);
+print "uname=",uname;
+]]>
+    </programlisting>
+    <para>来说明，如何在Windows下，进行Python开发。</para>
+    <para></para>
+    <sect2 xml:id="primitive_env_dev_python"><title>Python的最原始的开发方式是什么样的</title>
+        <para>相对来说，最原始的，最基本的，开发Python的方式，只是：</para>
+        
+        <sect3 xml:id="text_editor_new_py_write_code"><title>找个文本编辑器，新建个.py文件，写上Python代码</title>
+            <para>Python代码，本身就只是文本；</para>
+            <para>所以，从原理上来说，只需要找个合适的文本编辑器，即可；</para>
+            <para>换句话说，如果只是简单的写写几行Python代码，你用Windows的记事本（Notepad），都是可以的；</para>
+            <para>只不过，由于Notepad功能太弱，所以在此个人推荐Notepad++。</para>
+            <tip xml:id="tip.why_rec_npp"><title>为何推荐用Notepad++去写Python代码</title>
+                <para>此处，推荐用Notepad++去写Python代码，做Python开发，的原因</para>
+                <para>除了本身Notepad++作为文本编辑器，好用之外，</para>
+                <para>还有一个，相对来说，比较重要的问题：字符编码</para>
+                <para>很多时候，由于Python开发者对于Python文件的编码，不太了解</para>
+                <para>导致在开发期间，出现很多，相对比较常见的字符编码的问题</para>
+                <para>所以，为了，更加深入的了解和学习，真正的掌握Python</para>
+                <para>有必要，从一开始学习Python的时候</para>
+                <para>就选用合适的工具，这样，避免后期，一些该知道的细节，尤其是文件的编码，不知道</para>
+                <para>而犯各种常见的错误</para>
+                <para></para>
+                <para>而关于Notepad++本身，不会使用，不熟悉，则可参考：</para>
+                <para><link xl:href="http://www.crifan.com/files/doc/docbook/rec_soft_npp/release/html/rec_soft_npp.html">【crifan推荐】轻量级文本编辑器，Notepad最佳替代品：Notepad++</link></para>
+                <para>关于Notepad++的几乎一切的内容，都可以在上述的教程中找到。</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </tip>
+            <para>此处呢，对应的就是：</para>
+            <para>用我所推荐的Notepad++，新建一个文件，然后包括代码进入，存为对应的一个.py的文件。</para>
+            <para>而关于如何操作，此处也一点点截图，透彻的说明一下：</para>
+            <para>此处再次提示一下，一下Notepad++的所有功能，特性，用法，上面那个帖子中，都有专门的介绍。</para>
+            <para>想要更加详细了解的相关的Notepad++的某个特定功能的用法的，自己去看即可。</para>
+            <para>下面的截图，就不再事无巨细的解释Notepad++的功能特点了。只是截图解释如何操作而已。</para>
+            <para>打开Notepad++后，点击新建，新建出一个新的文件：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/npp_new_file.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/npp_new_file.png" scalefit="0" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>然后把上面给你们的代码，拷贝进去，就变成了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/copied_python_code.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/copied_python_code.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>此处由于是新建的空白文件，所以Notepad++，不知道你是Python代码，没法帮你自动实现语法高亮，</para>
+            <para>需要手动去设置一下：</para>
+            <para><keycap>语言</keycap>&rArr;<keycap>P</keycap>&rArr;<keycap>Python</keycap></para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/set_to_python_highlight.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/set_to_python_highlight.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>就可以看到Python代码的语法高亮的效果了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/highlighted_python_code.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/highlighted_python_code.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>然后去保存到某个位置。</para>
+            <para><keycap>文件</keycap>&rArr;<keycap>另存为</keycap></para>
+            <para>在弹出的对话框中，输入要保存的文件名：<filename>demoRunPythonUnderWindows</filename></para>
+            <para>提示：其中可以看到<link xl:href="http://www.crifan.com/files/doc/docbook/rec_soft_npp/release/html/rec_soft_npp.html">Notepad++</link>自动帮你写好了<filename class="extension">.py</filename>后缀，那是因为你之前设置了Python语法高亮。</para>
+            <para>然后再选择对应的路径去保存：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/input_file_name_and_save_to_some_folder.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/input_file_name_and_save_to_some_folder.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <warning xml:id="note.not_contain_special_char"><title>路径中不要包含（中文，空格等）特殊字符</title>
+                <para>对于保存文件来说，需要注意的是：</para>
+                <para>Python，以及其他语言，开发期间，最好都不要让路径中带有特殊字符</para>
+                <para>此处所谓的特殊字符，指的是非（ASCII）英文字符，主要包括：</para>
+                <itemizedlist>
+                    <listitem>中文字符</listitem>
+                    <listitem>空格</listitem>
+                    <listitem>其他特殊字符</listitem>
+                </itemizedlist>
+                <para>而只包含普通的英文字符，即字母数字下划线。</para>
+                <para>比如，我此处的路径，用的是：</para>
+                <para><filename class="directory">E:\Dev_Root\python\how_to_dev_python\</filename></para>
+                <para>否则，很容易在后期开发期间，出现一些异常现象</para>
+                <para>比如找不到文件，文件夹等问题</para>
+                <para>以及常见的中文路径无法识别等问题。</para>
+            </warning>
+            <para>保存好后，就是这样的了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/has_saved_py_file.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/has_saved_py_file.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para></para>
+        </sect3>
+        
+        <sect3 xml:id="open_cmd_change_to_file_dir"><title>打开Windows的cmd，并且切换到对应的python脚本所在目录</title>
+            <para>且换到对应的，Python文件所在的，文件夹，有两种办法：</para>
+            
+            <sect4 xml:id="manually_open_cmd_change_to_that_dir"><title>方法1：手动打开cmd，并cd到对应路径</title>
+                <para>而对于，什么是windows的cmd，如何打开cmd，如何切换到对应的路径等内容，不熟悉的话，可以去参考：</para>
+                <para><link xl:href="http://www.crifan.com/files/doc/docbook/soft_dev_basic/release/html/soft_dev_basic.html#win_cmd">Windows的命令行工具: cmd</link></para>
+            </sect4>
+            
+            <sect4 xml:id="use_npp_open_current_dir"><title>方法2：通过Notepad++的Open current dir cmd</title>
+                <para>此处，使用一个更方便的办法，利用Notepad++中功能，直接打开cmd，并切换到对应路径：</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/run_open_current_dir_cmd.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/run_open_current_dir_cmd.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+            </sect4>
+            
+            <para>然后就直接实现，打开了cmd，并且切换到对应的当前文件所在路径了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/open_cmd_and_in_current_dir.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/open_cmd_and_in_current_dir.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para></para>
+        </sect3>
+        
+        <sect3 xml:id="run_your_python_file_in_cmd"><title>在cmd中去运行你的Python脚本（.py文件）</title>
+            <para>然后就是，在cmd中，输入你的Python脚本，即<filename class="extension">.py</filename>文件的完整的文件名。</para>
+            <para>此处是：</para>
+            <para><filename>demoRunPythonUnderWindows.py</filename></para>
+            <tip xml:id="use_tab_auto_input"><title>利用TAB键实现自动输入</title>
+                <para>正常的是通过手动输入对应的Python的完整的文件名，即，对于此处的<filename>demoRunPythonUnderWindows.py</filename>，一个个字母的输入</para>
+                <para>不过，此处有个小技巧，可以利用Windows（和Linux中通用的）<keycap>Tab</keycap>键，然后会自动显示出你当前目录的文件；</para>
+                <para>如果当前文件夹有多个文件，多次按<keycap>Tab</keycap>键，会在多个文件之间切换。</para>
+                <para>此处就一个文件，所以通过按<keycap>Tab</keycap>键，就可以一下子就显示出对应的整个文件名了：</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/tab_show_full_name.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/tab_show_full_name.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+            </tip>
+            <para>然后输入回车，即可运行对应的Python脚本，接着在cmd中也就可以看到输出的结果了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/enter_to_print_info.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/enter_to_print_info.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para></para>
+        </sect3>
+        
+        <para></para>
+        <para>如此，就是一个，完整的，在windows的cmd中，运行Python脚本的流程了。</para>
+        <para>而接下来，作为正常的开发Python的流程就只是：</para>
+        <itemizedlist>
+            <listitem><para>你继续去修改你的Python代码，添加新的代码，然后保存python文件，</para></listitem>
+            <listitem><para>再回到cmd中，重新再次运行Python，以验证程序运行是否正常，是否获得了你所期望的结果。</para></listitem>
+            <listitem><para>如此反复，一点点，由少到多，一点点写出足够复杂的Python代码，实现你的复杂的功能。</para></listitem>
+        </itemizedlist>
+    </sect2>
+    
+    <sect2 xml:id="use_python_interactive_shell_do_dev"><title>利用Python的shell进行交互式开发又是什么样的</title>
+        <para>Python有个shell，提供一个Python运行环境。方便你交互式开发。</para>
+        <para>即写一行代码，就可以立刻被运行，然后方便查看到结果。</para>
+        <para>而Python的Shell，在Windows环境下，又分两种：</para>
+        <itemizedlist>
+            <listitem>Python (command line)</listitem>
+            <listitem>IDLE (Python GUI)</listitem>
+        </itemizedlist>
+        <para>下面分别介绍一下。</para>
+        <para></para>
+
+        <sect3 xml:id="command_line_version_python_shell"><title>命令行版本的Python Shell – Python (command line)</title>
+            <para>Windows下，安装好Python后，你可以在开始菜单中，找到对应的command line版本的Python Shell的：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/python_command_line.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/python_command_line.png" scalefit="0" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>其实，<emphasis>Win7</emphasis>中，有个更方便的方式，直接在搜索框中搜<emphasis>python</emphasis>，即可找到：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/search_python_can_show_shell.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/search_python_can_show_shell.png" scalefit="0" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>打开后，就是这个样子的：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/opened_python_shell_command_line.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/opened_python_shell_command_line.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>其中可以显示出来对应的python版本信息和系统信息。</para>
+            <para>然后就是<emphasis>三个大于号&gt;&gt;&gt;</emphasis>接下来，你就可以像在之前所说的，</para>
+            <para>普通文本中输入python代码一样，在此一行行输入代码，然后就可以显示对应的信息了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/directly_show_print_info.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/directly_show_print_info.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <tip xml:id="tip.why_called_interactive_shell"><title>为何叫做交互式shell (interactive shell)</title>
+                <para>其中可以看到，当你输入对应的，第一行print时，此处命令行（command line）版本的Python Shell中，</para>
+                <para>就可以，动态的，交互式地，显示出对应的信息了。</para>
+                <para>正由于，此处可以，直接地，动态的，交互性式地，显示出对应的信息，</para>
+                <para>所以，才被叫做Python 的交互式的Shell，简称Python Shell。</para>
+            </tip>
+            <para>对应的，把前面的代码都输入完毕，结果显示为：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/show_all_print_info.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/show_all_print_info.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para></para>
+        </sect3>
+
+        <sect3 xml:id="gui_version_python_shell_idle"><title>带图形界面的Python Shell – IDLE (Python GUI)</title>
+            <para>下面将要介绍的，同样是Python的Shell，但是是相对于command line版本而言，是GUI，带图形界面的版本的。</para>
+            <para>对应的打开方式，和上面类似，可以直接搜<emphasis>python</emphasis>而找到：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/search_pyth_can_found_IDLE.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/search_pyth_can_found_IDLE.png" scalefit="0" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>对应的，可以看到，其名字写的是<emphasis>IDLE</emphasis></para>
+            <para>打开后就是这样的：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/tk_python_shell.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/tk_python_shell.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <tip xml:id="tip.idle_red_tk_mean_dev_by_using_tkinter"><title>IDLE左上角的红色TK图标表示IDLE是用Tkinter图形库开发的</title>
+                <para>左上角的红色图标，好像是TK，是图形界面库的一种。</para>
+                <para>这个就是，很多Python教程中，</para>
+                <para>所常用来作为Python的开发环境，教别人写Python代码的那个IDLE。</para>
+                <para>关于Python中的Tkinter图形库，详见：</para>
+                <para><link xl:href="http://www.crifan.com/summary_python_graphics_gui_libs_packages/">【整理】Python中的图形库</link></para>
+                <para>中的：</para>
+                <para><link xl:href="http://www.crifan.com/try_python_tkinter_module/">【记录】折腾Python中的Tkinter</link></para>
+            </tip>
+            <para>对应的，输入上述的代码，结果也是类似的：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/IDLE_show_print_info.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/IDLE_show_print_info.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para></para>
+            <warning xml:id="warn.idle_multiple_line_will_wrong"><title>IDLE中一次性粘贴多行代码再运行则会出错</title>
+                <para>如果你对于IDLE的运行方式：交互式的，一行一行的输入，才能正常运行</para>
+                <para>不熟悉的话，作为新手，有些人会犯这样的错误：</para>
+                <para>在别处拷贝Python示例代码，然后一次性的粘贴多行代码到IDLE中</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/python_idle_edit_paste.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/python_idle_edit_paste.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para>然后输入回车去运行：</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/copied_multiple_line_then_enter.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/copied_multiple_line_then_enter.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para>结果，很明显，会出错：</para>
+                <para>此处是不能正常输入，之前所期望的python版本信息，</para>
+                <para>而是出现其他异常情况：只是显示此处的注释代码</para>
+                <para>（因为此处最开始部分的代码，就只是注释代码）</para>
+                <para>（如果你是其他的多行代码，则对应的就是出现其他对应的错误了）</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/show_error_info_in_python_idle.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/show_error_info_in_python_idle.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para>而，如果想要正确的运行代码，</para>
+                <para>则应该和之前一样，正常的，一行一行的输入代码，并回车，去执行</para>
+                <para>才能正常的，显示出你所希望看到的信息</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/input_line_by_line_will_show_expected_output.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/input_line_by_line_will_show_expected_output.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para></para>
+            </warning>
+        </sect3>
+
+        <sect3 xml:id="python_shell_purpose"><title>关于（command line或GUI版本的）Python Shell的用途</title>
+            <para>而作为一般的Python开发的话，则很少有用这个Python Shell的，不论是command line的还是GUI版本的IDLE。</para>
+            <para>其比较适合用来测试，演示一些简单的代码的执行的效果。</para>
+            <para>好处是很方便，可以立刻看到代码执行的结果。</para>
+            <para>所以，结论就是：</para>
+            <para><emphasis>对于python的shell，不论是command line版还是GUI版，都比较适合偶尔要测试少量的Python代码的情况下去使用，而不适合长期的开发Python。</emphasis></para>
+            <example xml:id="eg.use_idle_do_url_decode"><title>举例：用Python的IDLE去做URL解码</title>
+                <para>比如我之前就是借用Python的一些库函数，实现一些对于url解码的功能：</para>
+                <para><link xl:href="http://www.crifan.com/find_real_link_from_google_link_when_failed_open_via_google/">【已解决】在用google搜索出来的链接无法打开的情况下，如何找到该链接的真实地址</link></para>
+            </example>
+            <para></para>
+        </sect3>
+
+    </sect2>
+
+    <sect2 xml:id="use_thirdparty_python_ide_do_dev"><title>利用第三方Python的IDE进行Python开发又是怎么回事</title>
+        <tip xml:id="tip.what_is_ide"><title>什么是IDE</title>
+            <para>关于IDE的基本概念，不了解的先去看：</para>
+            <para><link xl:href="http://www.crifan.com/what_is_ide">【整理】什么是IDE</link></para>
+        </tip>
+        <para>即：</para>
+        <equation xml:id="eq.ide_concept"><title>什么是IDE</title>
+            <mathphrase>
+                <para>IDE</para>
+                <para>= 集成开发环境</para>
+                <para>= 把开发相关的各种环境（和工具）都集成到一起</para>
+            </mathphrase>
+        </equation>
+        <para>而Python的IDE，就是：</para>
+        <equation xml:id="eq.python_ide_concept"><title>什么是Python的IDE</title>
+            <mathphrase>
+                <para>Python IDE</para>
+                <para>= Python的集成开发环境</para>
+                <para>= 把和Python开发相关的各种工具</para>
+                <itemizedlist>
+                    <listitem>Python代码编辑器：替代你前面用的Notepad++等文本编辑器</listitem>
+                    <listitem>Python的运行环境：模拟或替代：Python的（命令行或GUI版本的，交互式）shell</listitem>
+                </itemizedlist>
+                <para>集成在一起</para>
+                <para>另外再加上各种文件，代码，项目的组织，管理等方面的各种功能</para>
+                <para>以此去方便你运行对应的Python代码，</para>
+                <para>方便你进行Python项目的开发</para>
+            </mathphrase>
+        </equation>
+        <para></para>
+        <sect3 xml:id="why_arise_python_ide"><title>为何会有Python的IDE</title>
+            <para>而之所以会有Python的IDE的诞生，也很容易理解。</para>
+            <para>就是因为，如果开发Python过程中，写Python代码，调试Python代码，查找相关的函数的解释等等操作，</para>
+            <para>如果都是基于前面介绍的，用Notepad++等编辑器去编辑Python代码，写完代码了，再切换到windows的cmd中去运行，</para>
+            <para>往往觉得很麻烦。</para>
+            <para>尤其是大型项目的话，可能就更加显得不那么高效；</para>
+            <para>以及对应的需要一些额外的功能，比如调试复杂的Python代码，需要一点点跟踪调试，找到错误的根本原因等等。</para>
+            <para>上述的开发模式，就更显得力不从心。</para>
+            <para>所以，才会有：</para>
+            <para>Python发展到现在，已经有了很多第三方的，别人开发的，可以用于或者专门用于Python开发的一些集成开发环境，即Python的IDE。</para>
+            <para></para>
+        </sect3>
+        <sect3 xml:id="common_python_ide"><title>目前常见的一些Python的IDE</title>
+            <para>参考别人的一些讨论和总结：</para>
+            <para><link xl:href="http://bbs.csdn.net/topics/390022660">【python】【求助】关于python编辑器的选择</link></para>
+            <para><link xl:href="http://blog.csdn.net/cserchen/article/details/7036435">python编辑器对比和推荐</link></para>
+            <para>罗列几个，相对用的比较广泛的（排名不分先后）：</para>
+            <itemizedlist>
+                <listitem>Ulipad</listitem>
+                <listitem>PyScripter</listitem>
+                <listitem>Wing IDE</listitem>
+                <listitem>Eclipse + pydev插件</listitem>
+            </itemizedlist>
+            <para>关于其中的一些IDE的效果，可以参考：</para>
+            <para><link xl:href="http://www.crifan.com/summary_common_python_ide_pyscripter_ulipad_eclipse_pydev_eric">【整理】各种Python的IDE(集成开发环境)的总结和对比</link></para>
+            <para></para>
+        </sect3>
+        <sect3 xml:id="python_ide_relation_with_windows_cmd"><title>Python的IDE和Python代码编辑器，Windows的cmd，等的关系</title>
+            <para>下面，随便找了一个Python的IDE，</para>
+            <para>比如</para>
+            <para><link xl:href="http://www.crifan.com/try_with_python_ide_pyscripter/">【记录】使用Python的IDE：PyScripter</link></para>
+            <para>通过截图来对比性的解释，</para>
+            <para>这样你就更容易理解Python的原始开发环境和Python的IDE之间的关系了：</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/edit_to_npp_and_output_to_cmd.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/edit_to_npp_and_output_to_cmd.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/dev_env/python_interpreter_to_python_shell.png" scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/dev_env/python_interpreter_to_python_shell.png" scalefit="1" width="100%" /></imageobject>
+                </mediaobject>
+            </informalfigure>
+            <para>这下，至少你应该对于：</para>
+            <itemizedlist>
+                <listitem>Windows的cmd</listitem>
+                <listitem>Python的Shell
+                    <itemizedlist>
+                        <listitem>command line版本</listitem>
+                        <listitem>GUI版本：IDLE</listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>Python的IDE</listitem>
+            </itemizedlist>
+            <para>三者之间的关系，有个大概的认识了。</para>
+            <para></para>
+        </sect3>
+        <sect3 xml:id="common_issue_while_use_python_ide"><title>使用IDE时所遇到的一些常见的问题</title>
+            <sect4 xml:id="ide_open_file_not_mean_run_in_shell"><title>IDE只能够打开了文件，并不代表就已经在shell中运行了该文件</title>
+                <para>这里有一个错误的例子，比如<link xl:href="http://zhidao.baidu.com/question/505232524.html">这里</link>所遇到的：</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/in_IDE_write_python_code_but_open_python_shell.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/in_IDE_write_python_code_but_open_python_shell.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para>如图，其在当前的IDE中，打开了一个<filename class="extension">.py</filename>文件：<filename>balanced_color_module.py</filename></para>
+                <para>按照正常的逻辑，应该到菜单中去运行代码，然后再去对应的console中（此处估计是Debug I/O），去查看运行的结果。</para>
+                <para>但是，很明显，对于此处的那个py文件（<filename>balanced_color_module.py</filename>），即使运行该文件，也不会有什么print输出信息</para>
+                <para>另外，其此处没有打开对应的console，而是打开的是Python Shell，所以从逻辑上就是：</para>
+                <para>其在Python Shell中输入的任何代码，本质上和你当前IDE中所打开的py文件，都没有半毛钱关系的。</para>
+                <para>所以导致的结果就是，虽然在Python Shell中输入了一些代码：</para>
+                <programlisting language="python">
+color = {"red":0.2, "green":0.4, "blue":0.4}
+balanced_color(color);
+                </programlisting>
+                <para>但是结果却出错，找不到对应的<emphasis>balanced_color</emphasis>函数。</para>
+                <para>所以，也就在常理之中，预料之内了。</para>
+                <para>因为，此时其所做的事情是：</para>
+                <para>使用了IDE，但是并没有使用IDE中集成的终端调试输出</para>
+                <para>却另外打开了Python Shell，</para>
+                <para>而由于此处的IDE中打开的代码，和Python Shell没有半毛钱关系，所以才会运行代码出错，找不到对应的函数的。</para>
+                <para></para>
+            </sect4>
+            <sect4 xml:id="makesure_runable_initial_python_code"><title>需要注意，确保有可以运行的Python起始部分的代码</title>
+                <para>比如<link xl:href="http://zhidao.baidu.com/question/505568675.html">这里</link>遇到的问题是，通过IDE中运行Python代码，但是没有响应：</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/dev_env/ulipad_run_python_no_response.png" scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/dev_env/ulipad_run_python_no_response.png" scalefit="1" width="100%" /></imageobject>
+                    </mediaobject>
+                </informalfigure>
+                <para>其所遇到的问题，其实本质上，和IDE没有关系，但是不熟悉Python的人，还是容易在IDE中犯这类问题的。</para>
+                <para>错误原因是：</para>
+                <para>没有起始代码可以运行；</para>
+                <para>解决办法是：</para>
+                <para>把上面最后一行的</para>
+                <programlisting language="python">   start();</programlisting>
+                <para>去掉缩进，顶行写，变成：</para>
+                <programlisting language="python">start();</programlisting>
+                <para>就可以了。使得Python可以执行到对应的<emphasis>start</emphasis>函数了。</para>
+                <para>当然，最好的写法是，把：</para>
+                <programlisting language="python">start();</programlisting>
+                <para>再改为：</para>
+                <programlisting language="python">
+if __name__ == "__main__":
+   start();
+                </programlisting>
+                <para>具体的解释，参见：</para>
+                <para><link xl:href="http://www.crifan.com/python_detailed_explain_about___name___and___main__/">【整理】Python中的__name__和__main__含义详解</link></para>
+                <para></para>
+            </sect4>
+            <para></para>
+        </sect3>
+        <para></para>
+    </sect2>
+    
+    <sect2 xml:id="summary_use_which_python_dev_env"><title>总结：到底使用哪种环境去开发Python</title>
+        <para>一句话：</para>
+        <para><emphasis>各取所需。根据自己的需求，决定用什么开发环境。</emphasis></para>
+        <para></para>
+        <sect3 xml:id="recommand_for_beginner_on_how_choose_python_dev_env"><title>对初学者的建议：如何选用Python的开发环境</title>
+            <para>再加一句：</para>
+            <para><emphasis>针对初学者，我个人倒是建议使用第一种，即windows的cmd下，去运行python脚本</emphasis></para>
+            <para>目的很明确：</para>
+            <para><emphasis>很多东西的学习，其本质上，都是需要一个循序渐进的过程的，学习Python语言同样如此。</emphasis></para>
+            <para>在没有学会走路，即如何搞懂Windows的cmd下运行Python脚本，</para>
+            <para>就想学会跑了，即直接利用Python的IDE，包括shell和第三方开发环境，</para>
+            <para>结果就是，很多东西，还是不明白到底是为什么，理解的不透彻。</para>
+            <para>而当Python的基本知识，基本开发流程熟悉了之后，再建议你去使用第三方的Python的IDE，到时候，才能算是用着很爽。</para>
+            <para>即：</para>
+            <orderedlist>
+                <listitem><emphasis>先：<link xl:href="http://www.crifan.com/files/doc/docbook/soft_dev_basic/release/html/soft_dev_basic.html#win_cmd">Windows的cmd</link> + <link xl:href="http://www.crifan.com/files/doc/docbook/rec_soft_npp/release/html/rec_soft_npp.html">Notepad++</link></emphasis></listitem>
+                <listitem><emphasis>再：选用某个<link xl:href="http://www.crifan.com/summary_common_python_ide_pyscripter_ulipad_eclipse_pydev_eric">IDE</link>，比如<link xl:href="http://www.crifan.com/try_with_python_ide_pyscripter">PyScripter</link>，<link xl:href="http://www.crifan.com/try_with_python_ide_ulipad">Ulipad</link>，<link xl:href="http://www.crifan.com/try_with_python_ide_eclipse_pydev">Eclipse+PyDev</link>等。</emphasis></listitem>
+            </orderedlist>
+            <para></para>
+        </sect3>
+        <para></para>
+    </sect2>
+    
+    <sect2 xml:id="use_python_under_windows"><title>如何在Windows环境下使用Python脚本</title>
+        <para>首先要说明的是，据我目前的了解，对于一般Windows的用户来说，想要使用已有的Python脚本的话，主要有两种形式可以使用。</para>
+        <orderedlist>
+            <listitem>直接运行文本式的Python脚本文件
+                <para>我们所常见的，多数的Python脚本，都是此形式的。而关于Python脚本，其实就是一个文本文件，你可以用任何一个文本编辑器，比如windows的<filename>Notepad.exe</filename>来打开对应的后缀名为.py的文件，比如我所发布的，用于博客搬家到wordpress的Python脚本<filename>BlogsToWordpress.py</filename></para>
+                <para>而对于在Windows的命令行，即<command>cmd</command>下运行Python脚本，用起来，就是这个样子的：</para>
+                <figure xml:id="fg.run_python_in_cmd"><title>在Windows下的cmd下面运行Python脚本的样子</title>
+                    <mediaobject>
+                        <imageobject role="html"><imagedata fileref="images/windows_cmd_run_python_script.png" align="left"   scalefit="0" width="100%" /></imageobject>
+                        <imageobject role="fo">  <imagedata fileref="images/windows_cmd_run_python_script.png" align="center" scalefit="1" width="100%" /> </imageobject>
+                    </mediaobject>
+                </figure>
+                <note><title>Windows的cmd下运行Python脚本，不是在Python的Command Line工具下运行Python脚本</title>
+                    <para>对于此用法不太熟悉的新手，需要注意一点的是，不要把，在Windows下的cmd中运行Python脚本，和在Python（安装好后自带有的）Command Line去写Python代码，运行Python代码，相混淆了</para>
+                    <para>对于Python的Command Line，以我此处Python 2.7为例，是从开始菜单中找到的：开始菜单 &rArr; Python 2.7 &rArr; Python (Command Line)，如图：</para>
+                    <figure xml:id="fg.start_menu_python_command_line"><title>开始菜单中找到的Python (Command Line)</title>
+                        <mediaobject>
+                            <imageobject role="html">
+                                <imagedata fileref="images/python_command_line_from_startup.png" align="left" scalefit="0" width="100%" />
+                            </imageobject>
+                            <imageobject role="fo">
+                                <imagedata fileref="images/python_command_line_from_startup.png" align="center" scalefit="1" width="50%"/>
+                            </imageobject>
+                        </mediaobject>
+                    </figure>
+                    <para>其打开后的效果如下：</para>
+                    <figure xml:id="fg.python_command_line_gui"><title>Python (Command Line)的界面</title>
+                        <mediaobject>
+                            <imageobject role="html">
+                                <imagedata fileref="images/python_command_line_screenshot.png" align="left" scalefit="0" width="100%" />
+                            </imageobject>
+                            <imageobject role="fo">
+                                <imagedata fileref="images/python_command_line_screenshot.png" align="center" scalefit="1" width="90%"/>
+                            </imageobject>
+                        </mediaobject>
+                    </figure>
+                </note>
+            </listitem>
+            <listitem>使用Python脚本发布者封装好的，可以独立运行的Python脚本对应的可执行文件
+                <para>此用法，必须要Python脚本发布者，专门在写完Python脚本的时候，专门去用相应的工具，将Python的文本文件，封装成可以脱离Python运行环境，可以独立运行的可执行文件。说白了，就是一个exe可执行文件，而运行此exe文件，不需要安装Python，即可运行。</para>
+            </listitem>
+        </orderedlist>
+
+        <sect3 xml:id="run_py_in_cmd"><title>如何在Windows下的cmd中运行<filename>BlogsToWordpress.py</filename></title>
+            <para>下面，以Win7为例，通过专门录制的gif动画，来说明，如何在Windows的cmd中，运行我的一个Python脚本：<filename>BlogsToWordpress.py</filename></para>
+            <figure xml:id="fg.animation_run_py_on_win_cmd"><title>动画演示如何在Windows的cmd中运行Python脚本<filename>BlogsToWordpress.py</filename></title>
+                <mediaobject>
+                    <imageobject role="html">
+                        <imagedata fileref="images/run_python_under_win_cmd.gif" align="left" scalefit="0" width="100%" />
+                    </imageobject>
+                    <imageobject role="fo">
+                        <imagedata fileref="images/run_python_under_win_cmd.gif" align="center" scalefit="1" width="100%"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <tip>
+                <para>上述gif动画演示，只支持HTML在浏览器中的显示。其他格式输出中，比如PDF中，不支持此gif动画。所以下面再用文字解释一下大概流程：<xref linkend="text_explain_run_py_in_cmd" /></para>
+                <para>如果你是在非HTML格式，比如PDF等，中查看此文，想要看动画的话，猛击<link xl:href="http://www.crifan.com/files/doc/docbook/language_summary/release/html/language_summary.html#fg.animation_run_py_on_win_cmd">动画演示如何在Windows的cmd中运行Python脚本BlogsToWordpress.py</link></para>
+            </tip>
+            <para>用文字简述就是：</para>
+            <formalpara xml:id="text_explain_run_py_in_cmd"><title>用文字解释如何在Windows的cmd中运行Python脚本BlogsToWordpress.py</title>
+                <orderedlist>
+                    <listitem>打开Windows的命令行环境cmd
+                        <para>开始  &rArr; 在"搜索程序和文件"的位置，输入<emphasis>cmd</emphasis>，win7会自动搜索到cmd，点击其以打开cmd</para>
+                    </listitem>
+                    <listitem>切换到对应的你的Python脚本所在位置
+                        <para>可以先去拷贝你的Python脚本所在的路径，此处为：<screen>E:\Dev_Root\svn_dev_root\website\python\BlogsToWordpress</screen>，然后在cmd中输入 
+                            <screen>
+E:
+cd E:\Dev_Root\svn_dev_root\website\python\BlogsToWordpress
+                            </screen>
+                        </para>
+                    </listitem>
+                    <listitem>输入脚本名（及参数），以运行Python脚本
+                        <para>输入相应的python脚本命令：<screen>BlogsToWordpress.py -s http://blog.sina.com.cn/lifecoaching</screen>然后回车运行该脚本</para>
+                    </listitem>
+                </orderedlist>
+            </formalpara>
+        </sect3>
+    </sect2>
+</sect1>
+
+<sect1 xml:id="how_dev_python_in_linux"><title>如何在Linux环境下开发Python</title>
+    <para>介绍如何在Linux环境下运行Python脚本</para>
+    <para>如何进行Python的开发</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="how_dev_python_in_mac"><title>如何在Mac环境下开发Python</title>
+    <para>Mac下本身已经安装了Python，所以不需要额外安装Python，就可以直接在终端Terminal下去运行Python了。</para>
+    <para>在Mac下运行Python脚本的方法如下：</para>
+    <figure xml:id="fg.run_python_under_mac_terminal"><title>在Mac下的Terminal中运行Python脚本：BlogsToWordpress</title>
+        <mediaobject>
+            <imageobject role="html"><imagedata fileref="images/run_python_under_mac_terminal.jpg" align="left"   scalefit="0" width="100%"/></imageobject>
+            <imageobject role="fo">  <imagedata fileref="images/run_python_under_mac_terminal.jpg" align="center" scalefit="1" width="100%"/></imageobject>
+        </mediaobject>
+    </figure>
+</sect1>
+
+</chapter>

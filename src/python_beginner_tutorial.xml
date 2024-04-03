@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE book
+[
+
+<!ENTITY cur_book_name      "python_beginner_tutorial" >
+<!ENTITY publish_date       "2015-05-26" >
+<!ENTITY release_version    "1.4.1" >
+
+<!ENTITY copyrith_year "2015" >
+<!ENTITY entity_common_multi_format     SYSTEM  "../../entity_common_multi_format.xml">
+<!ENTITY entity_common_publish_info     SYSTEM  "../../entity_common_publish_info.xml">
+]>
+
+<book version="5.0"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:lang="zh_CN">
+<info>
+    <title>python初级教程：入门详解</title>
+    <subtitle></subtitle>
+    <keywordset>
+        <keyword>Python</keyword>
+        <keyword>初级教程</keyword>
+        <keyword>入门详解</keyword>
+        <keyword>下载Python</keyword>
+        <keyword>安装Python</keyword>
+    </keywordset>
+
+    <abstract>
+        <para>本文是针对Python的初学者，从无到有的介绍Python语言如何入门，主要包括了：Python的简介，如何下载Python，如何安装Python，如何使用终端、Shell，IDE等各种开发环境进行Python开发，Python中的语法和基本知识、概念和逻辑，以及继续深入学习Python的方法，另外还整理一些值得参考的资料。</para>
+        &entity_common_multi_format;
+    </abstract>
+
+    <revhistory>
+        <revision>
+            <revnumber>&release_version;</revnumber>
+            <date>&publish_date;</date>
+            <revremark>
+                <orderedlist>
+                    <listitem>把之前教程的地址移过来</listitem>
+                    <listitem>合并帖子的内容：【整理】【多图详解】如何在Windows下开发Python：在cmd下运行Python脚本+如何使用Python Shell（command line模式和GUI模式）+如何使用Python IDE</listitem>
+                    <listitem>为出版而整理：每章都加了摘要，每章都完善了架构。</listitem>
+                    <listitem>整理章节的架构；整理第一章的内容</listitem>
+                    <listitem>添加Python学习资料</listitem>
+                </orderedlist>
+            </revremark>
+            <authorinitials>crl</authorinitials>
+        </revision>
+    </revhistory>
+
+    &entity_common_publish_info;
+</info>
+
+<xi:include href="preface.xml" />
+<xi:include href="ch01_python_intro.xml" />
+<xi:include href="ch02_python_download.xml" />
+<xi:include href="ch03_python_install.xml" />
+<xi:include href="ch04_python_dev_env.xml" />
+<xi:include href="ch05_python_grammar_and_basics.xml" />
+<xi:include href="ch06_python_learn_method.xml" />
+<xi:include href="ch07_python_faq.xml" />
+<xi:include href="ch08_python_res.xml" />
+<xi:include href="reference.xml" />
+
+</book>

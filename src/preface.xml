@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE preface>
+
+<preface
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="preface">
+<title>前言</title>
+
+<sect1 xml:id="purpose"><title>本文目的</title>
+    <para>本文目的在于，让原先对于Python不熟悉的，甚至没什么概念的人。 </para>
+    <para>看完本系列教程后，从Python的小白，变成，对于Python可以算是入门了。</para>
+</sect1>
+
+<sect1 xml:id="prerequisite"><title>看此文之前你所要掌握的知识</title>
+    <para>最好有其他计算机语言的基础</para>
+    <para>比如C语言，Java语言等。</para>
+    <para>当然，如果没有，也是可以看此文的。</para>
+    <para>我会在必要的时候，进行相应的提示的。</para>
+</sect1>
+
+</preface>

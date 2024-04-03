@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch01_python_intro">
+<title>Python简介</title>
+<abstract>
+    <para>本章主要讲解在开始学习Python之前，所需要了解到的Python的一些基本概念，</para>
+    <para>包括Python是什么，Python的特点和常见的用途，以及Python的两大版本之间的主要区别。</para>
+</abstract>
+
+<para>在开发Python之前，需要先搞懂Python是啥。</para>
+<para>下面就是介绍一下，概念性的东西。</para>
+<para><link xl:href="http://www.crifan.com/simple_intro_what_is_python_and_how_to_run_python_script">【整理】Python语言简介</link></para>
+
+<sect1 xml:id="what_is_python"><title>什么是Python</title>
+    <sect2 xml:id="python_word_self_mean"><title>Python这个单词的本意是蟒蛇</title>
+        <para>Python，首先，作为一个英文单词，其本意是：</para>
+        <para>巨蟒，蟒蛇</para>
+        <para>的意思。</para>
+    </sect2>
+    
+    <sect2 xml:id="python_lan_mean"><title>Python是一种计算机语言</title>
+        <para>对于，Python，这个词来说，在计算机语言领域内，此处，我们指的是，一种计算机语言，叫做Python</para>
+        <tip xml:id="tip.python_name_origin"><title>Python语言的名字的由来</title>
+            <para>之所以，我们把Python，蟒蛇，作为此计算机语言的名字，是有其历史典故的：</para>
+            <para>即，Python语言名称的由来的历史了：</para>
+            <para>Python语言的创始人，吉多·范罗苏姆（Guido van Rossum）</para>
+            <para>在1989年圣诞节期间，在阿姆斯特丹，为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，</para>
+            <para>而在给自己新创造的计算机语言起名字的时候，</para>
+            <para>由于其是，自于七十年代风靡全球的英国六人喜剧团体，巨蟒剧团（Monty Python）的忠实粉丝，</para>
+            <para>所以，就把此计算机语言的名字叫做：Python</para>
+            <para>这就是，Python，一种计算机语言，的名字的由来，被叫成了一种看似很凶猛的动物，蟒蛇，的名字。</para>
+            <para>当然，Python语言本身，并不”凶猛“</para>
+            <para>倒是，说起Python语言的功能强大，倒是可以真的强大到，称其为，”凶猛“，都不为过的。</para>
+        </tip>
+    </sect2>
+    
+    <sect2 xml:id="python_computer_lan_called_meaning"><title>作为计算机语言的Python的各种叫法的含义</title>
+        <para>作为一种计算机语言的Python，自然也就会有，根据计算机语言不同的层面，去将其分类，所以你常常会听到如下说法：</para>
+        <para>比如：</para>
+        <para><link xl:href="http://zh.wikipedia.org/wiki/Python_%28%E6%B6%88%E6%AD%A7%E4%B9%89%29" /></para>
+        <para>中的：</para>
+        <para>Python，一种直译式、交互式、面向对象的计算机编程语言，由Guido van Rossum创建并以Monty Pythons飞行马戏团的名字命名。</para>
+        <para></para>
+
+        <sect3 xml:id="python_script_lan"><title>Python是一种脚本语言</title>
+            <para>脚本，对应的英文是：script</para>
+            <para>普通人，看到script这个英文单词，或许想到的更多的是：电影的剧本，就是一段段的脚本，所组成的</para>
+            <para>电影剧本的脚本，决定了电影中的人和物，都做哪些事情，怎么做</para>
+            <para>而计算机中的脚本，决定了：</para>
+            <para>计算机中的操作系统和各种软件工具，要做哪些事情，以及具体怎么做</para>
+            <para></para>
+            <para>其实，脚本，这个词，笔者的理解，还有另外一种感觉：随性</para>
+            <para>因为，现实中，写电影脚本，那直接拿张纸和笔，就可以写了，写完了，就可以拿去用，拿去拍电影了</para>
+            <para>而计算机中的脚本，其实就是普通的文本，就是写到文本文件中的代码而已，其也是有随性这个特点：写完了，直接就可以（在某种具有解释功能的环境中）运行了</para>
+            <para>比如：Linux中的shell脚本，就是直接弄个文本文件，写上shell脚本代码，然后保存文件，然后就可以，在Linux的Shell这个带有shell的解释功能的shell环境中，运行了</para>
+            <para>与此相对的，不那么随性的是：其他的，非脚本语言，常叫做编译性语言，比如C语言，往往都是需要额外加上编译这个步骤，才能执行的。</para>
+            <para></para>
+        </sect3>
+        
+        <sect3 xml:id="python_interactive_lan"><title>Python是一种交互性的语言</title>
+            <para></para>
+        </sect3>
+        
+        <sect3 xml:id="python_interpreted_lan"><title>Python是一门解释性的语言</title>
+            <para>解释性，也被叫做：直译式</para>
+            <para></para>
+
+            <tip xml:id="tip.what_is_interpreted_lan"><title>什么是解释性语言</title>
+                <para>简单说就是，无需编译源码为成可执行文件，直接使用源码，就可以运行的语言。</para>
+                <para>此处即，对于Python的源代码，文本文件，直接就可以去执行了，不需要像C，C#等语言，还需要编译一下，才可以运行。</para>
+                <para>更详细的解释，参见：TODO：解释性语言的详细解释。</para>
+            </tip>
+        </sect3>
+        
+        <sect3 xml:id="python_object_oriented_lan"><title>Python是一种面向对象的语言</title>
+            <para></para>
+        </sect3>
+        
+        <sect3 xml:id="python_high_level_lan"><title>Python是一种高级语言</title>
+            <para><link xl:href="http://www.baike.com/wiki/Python" /></para>
+            <para></para>
+            <para></para>
+        </sect3>
+    </sect2>
+
+</sect1>
+
+<sect1 xml:id="what_python_can_do"><title>Python能干什么</title>
+    <para>这里：</para>
+    <para><link xl:href="http://zh.wikipedia.org/wiki/Python">Python - 维基百科，自由的百科全书</link></para>
+    <para>中就有很多举例：使用Python编写的著名应用</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_features"><title>Python的特点</title>
+
+    <sect2 xml:id="python_as_interpreted_lan_features"><title>作为解释性语言的Python的优缺点</title>
+        <para>而Python语言，本身就是一种解释性语言，</para>
+        <para>所以，作为解释性语言的Python，本身就有解释性语言天然就有的一些优点和缺点：</para>
+        <para></para>
+
+        <sect3 xml:id="python_as_interpreted_lan_pros"><title>Python的优点</title>
+            <para></para>
+            <itemizedlist>
+              <listitem>不需要编译，即可运行</listitem>
+            </itemizedlist>
+            <para></para>
+        </sect3>
+
+        <sect3 xml:id="python_as_interpreted_lan_cons"><title>Python的缺点</title>
+            <itemizedlist>
+              <listitem>性能相对不是特别强
+                    <para>所谓的，性能不是特别强，是先对来说的</para>
+                    <para>在某些，或者说，极少的，领域，对于性能要求非常高，则此时就不太适合使用Python去实现了</para>
+                    <para>现在已有的解决方法是：使用其他，相对Python性能更好的语言，实现和性能相关的那部分的功能，</para>
+                    <para>然后再整合集成到Python内。</para>
+                    <para></para>
+              </listitem>
+            </itemizedlist>
+            <para></para>
+        </sect3>
+    </sect2>
+
+    <sect2 xml:id="python_self_features"><title>Python语言自身的特点</title>
+        <para>除了作为解释性语言的Python自带的优缺点之外，作为Python语言本身，的确有其自己的特点：</para>
+        <para>一般来说，讨论某种东西的特点，都是将其和同类事物去比较的；</para>
+        <para>相应的，此处，讨论Python的特点的时候，把Python和其他计算机语言相比的，其特点，可以描述如下：</para>
+        <para>Python相对最大的一个特点，算是：</para>
+        <para><emphasis>代码缩进决定了代码的逻辑关系，而不仅仅是为了好看</emphasis></para>
+        <para>其他更多的特点，可以总结如下：</para>
+        <itemizedlist>
+            <listitem>有很多特性，使得语言本身很方便编程者使用
+                <para>比如对于字符串可以直接通过数组下表去获得对应子字符串</para>
+                <para>这类特性，是很多其他语言，本身所不具有的。</para>
+            </listitem>
+            <listitem>Python是一种被广泛采用的胶水语言
+                <para>粘合能力，相对其他语言，很强</para>
+                <para></para>
+            </listitem>
+            <listitem>功能丰富的自带的库以及种类和数量繁多且强大的第三方库
+                <para>除了本身Python语言本身自带的标准库之外</para>
+                <para>由于Python语言本身很好用，促使很多其他人，前前后后，写了N多个库</para>
+                <para>积累至今，就成了：Python拥有数量巨大的，各种各样的，功能强大的，第三方的库函数。</para>
+                <para>此特点，对于Python语言的使用者来说，有着显而易见的好处：</para>
+                <para>当你去实现很多各种功能的时候，往往不需要重复造轮子，</para>
+                <para>往往是可以找到，现成的，已有的，内置Python库，或第三方的Python的库，去帮你实现你要的功能</para>
+                <para>换句话说：你去实现一个复杂的功能的时候，往往变成了，找到合适的库，并使用，即可。</para>
+                <para>与此相对的，用其他语言去实现同样的功能的时候，由于缺少好用的库，而使得你需要重头到尾，全新的实现对应的功能所需的代码。</para>
+                <para>由此对比出，Python的好用和强大。</para>
+            </listitem>
+        </itemizedlist>
+        <para></para>
+    </sect2>
+</sect1>
+
+<sect1 xml:id="python_related_basic_knowledge"><title>Python相关的必备知识</title>
+    <para>对于Python语言的学习，即使没有去深入学习Python的细节知识</para>
+    <para>对于Python相关的一些必备知识，常识性的知识，也是需要先去了解清楚的。</para>
+    <para>下面就是对于Python的相关的常识性的东西，先做个解释：</para>
+    <para></para>
+
+    <sect2 xml:id="python_suffix"><title>Python文件的后缀是py</title>
+        <para>计算机的世界中，多数东西的类型，都是通过文件名的后缀来区分的。</para>
+        <para>Python的文件的后缀是py</para>
+    </sect2>
+
+    <sect2 xml:id="python_abbr"><title>Python的缩写和简称</title>
+        <para>正是由于Python的文件名后缀是py</para>
+        <para>所以，很多人，也常常用py来指代Python</para>
+        <para>比如后面你会提到的，有些人把Python 2简写为py2</para>
+    </sect2>
+
+    <sect2 xml:id="python_official_website"><title>Python的官网</title>
+        <para><link xl:href="http://www.python.org/" /></para>
+        <para></para>
+        <para></para>
+    </sect2>
+
+    <sect2 xml:id="python_logo"><title>Python的logo图案</title>
+        <para></para>
+        <para></para>
+    </sect2>
+
+</sect1>
+
+</chapter>

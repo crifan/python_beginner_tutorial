@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch08_python_res">
+<title>Python相关资源</title>
+<abstract>
+    <para>此处整理一些Python的学习资料。</para>
+</abstract>
+
+<para>TODO：整理更多的有价值的参考资料。</para>
+<para>此处记录一些不错的Python相关的资料，供需要时参考：</para>
+<itemizedlist>
+    <listitem><link xl:href="http://woodpecker.org.cn/abyteofpython_cn/chinese/">简明Python教程</link>
+        <para>Swaroop, C. H. 著，>沈洁元  译</para>
+        <para>特点：内容很全。</para>
+    </listitem>
+    <listitem><link xl:href="http://sebug.net/paper/books/dive-into-python3/">深入 Python 3</link>
+        <para></para>
+        <para></para>
+    </listitem>
+    <listitem>关于python的中文文档
+        <para>这里：<link xl:href="http://www.elias.cn/Python/HomePage" />介绍了很多的资源。其中就有<link xl:href="http://wiki.woodpecker.org.cn/moin/March_Liu/PyTutorial">python教程的中文版</link></para>
+    </listitem>
+    <listitem>在线实时演示Python代码的运行
+        <para><link xl:href="http://pythontutor.com/">Online Python Tutor - Learn programming by visualizing code execution</link></para>
+    </listitem>
+    <listitem>Python的示例程序
+        <para><link xl:href="https://wiki.python.org/moin/SimplePrograms">SimplePrograms - Python Wiki</link></para>
+    </listitem>
+    <listitem>各种Python的示例代码
+        <para><link xl:href="http://www.java2s.com/Code/Python/CatalogPython.htm">Python examples (example source code) Organized by topic</link></para>
+    </listitem>
+    <listitem>Python风格的详尽解释和举例
+        <para><link xl:href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</link></para>
+    </listitem>
+    <listitem>如何写自己的库函数
+        <para><link xl:href="http://postgetter-app.googlecode.com/hg-history/04cc032892e8a81a46eeb15ec7814fc3b39ed6ab/PostGetter.py" />值得学习学习。关于自己写类，库函数时，如何写，如何处理logger和异常等等方面，值得学习。</para>
+    </listitem>
+    <listitem>Python资料大全
+        <para><link xl:href="http://simple-is-better.com/sites/" />收集了N多关于的Python的网站、教程、图书、框架、应用等等内容。</para>
+    </listitem>
+    <listitem>关于有介绍Python的IDE
+        <para><link xl:href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments" /></para>
+    </listitem>
+    <listitem>MicroPython
+        <para>之前看到一个好玩的，另类版本的Python：</para>
+        <para><link xl:href="http://micropython.org/">MicroPython</link></para>
+        <para><link xl:href="http://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers">Micro Python: Python for microcontrollers</link></para>
+    </listitem>
+</itemizedlist>
+
+</chapter>

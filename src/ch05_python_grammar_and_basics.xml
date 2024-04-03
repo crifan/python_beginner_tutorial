@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch05_python_grammar_and_basics">
+<title>Python的基本语法和基础知识</title>
+<abstract>
+    <para>本章主要讲解读者在拥有了自己的开发环境后，需要继续深入学习的Python的基本语法和Python中的一些基本的概念。</para>
+    <para></para>
+</abstract>
+
+<para>此处只介绍，最基本的一些Python的语法，和其他一些基础知识。</para>
+
+
+<tip xml:id="tip.python_grammar_and_basics"><title>相关旧帖</title>
+    <para><link xl:href="http://www.crifan.com/python_module_vs_library_vs_package">【整理】Python中的module,library,package之间的区别</link></para>
+    <para><link xl:href="http://www.crifan.com/python_detailed_explain_about___name___and___main__">【整理】Python中的__name__和__main__含义详解</link></para>
+</tip>
+
+<sect1 xml:id="one_figure_entry_python"><title>一张图片入门Python</title>
+    <para>之前已有别人整理了，<link xl:href="http://www.love67.net/?p=731">一张图入门Python</link>，快速了解各种基本的语法。</para>
+    <para>英文版：</para>
+    <figure xml:id="fg.quick_python_script_explanation"><title>Quick Python Script Explanation</title>
+        <mediaobject>
+            <imageobject role="html"><imagedata fileref="images/quick_python_script_explanation.jpg" align="left"   scalefit="0" width="100%" /></imageobject>
+            <imageobject role="fo">  <imagedata fileref="images/quick_python_script_explanation.jpg" align="center" scalefit="1" width="100%" /> </imageobject>
+        </mediaobject>
+    </figure>
+    <para>中文版：</para>
+    <figure xml:id="fg.one_figure_entry_python_zhcn"><title>一张图入门Python中文版</title>
+        <mediaobject>
+            <imageobject role="html"><imagedata fileref="images/one_figure_entry_python_zhcn.jpg" align="left"   scalefit="0" width="100%" /></imageobject>
+            <imageobject role="fo">  <imagedata fileref="images/one_figure_entry_python_zhcn.jpg" align="center" scalefit="1" width="100%" /> </imageobject>
+        </mediaobject>
+    </figure>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_2x_3x"><title>Python中的2.x版本和3.x版本</title>
+    <tip xml:id="tip.python_2x_3x"><title>相关旧帖</title>
+        <para><link xl:href="http://www.crifan.com/summary_the_difference_between_python2_and_python3">【整理】总结Python2(Python 2.x版本）和Python3（Python 3.x版本）之间的区别</link></para>
+        <para><link xl:href="http://www.crifan.com/summary_reason_of_python_3_x_print_syntaxerror_invalid_syntax">【整理】关于Python 3.x中，使用print函数时出现的语法错误（SyntaxError: invalid syntax）的问题的原因</link></para>
+    </tip>
+    
+    <para>在具体介绍，如何下载Python，安装Python，进行Python开发之前，一个不得不先要解释的话题就是，Python中的版本的问题。</para>
+    <para>主要包括2.x系列的和3.x系列的，两者不兼容。</para>
+    <para>下面详细解释一下。</para>
+    <para>关于两种版本的对比，也常写成为：</para>
+    <itemizedlist>
+        <listitem>Python 2.x vs Python 3.x</listitem>
+        <listitem>Python 2 vs Python 3</listitem>
+        <listitem>py2 vs py3</listitem>
+    </itemizedlist>
+    <para></para>
+    <para>抽空参考：</para>
+    <para>https://wiki.python.org/moin/Python2orPython3</para>
+    <para>去整理一下版本的历史。</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_file_encoding_declaration"><title>Python文件编码声明</title>
+    <para>之所以要在介绍Python的语法之前，先去说明这个Python文件的编码声明，</para>
+    <para>那是因为，更多的Python初学者，对于去参考别人写的Python的文件中的代码的时候，</para>
+    <para>前几行，就是看到的这部分，</para>
+    <para>所以，需要先介绍这部分的内容，</para>
+    <para>使得能在真正开始参考学习Python代码之前，就对于文件编码声明这部分的内容，有个清晰的认识</para>
+    <para>待整理：</para>
+    <para><link xl:href="http://www.crifan.com/python_head_meaning_for_usr_bin_python_coding_utf-8">【整理】关于Python脚本开头两行的：#!/usr/bin/python和# -*- coding: utf-8 -*-的作用 – 指定文件编码类型</link></para>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_indent"><title>Python中的缩进</title>
+    <para>此处在介绍Python的基本的变量定义等内容之前，需要详细的介绍，关于Python中的缩进</para>
+    <para>因为，此缩进不仅仅是美观问题，而且还决定了代码的逻辑层次，决定了代码的含义</para>
+    <para></para>
+    <para>TODO：添加提示，关于别的语言中，一般来说，代码的缩进与否，都是为了代码更美观，可读性更好，而此处的Python特殊：缩进直接决定了代码的内在逻辑含义。</para>
+    <para></para>
+    <para><link xl:href="http://www.crifan.com/tutorial_python_indent">【教程】详解Python中代码缩进（Indent）：影响代码的内在逻辑关系和执行结果</link></para>
+</sect1>
+
+<sect1 xml:id="python_var_declaration_and_definition"><title>Python中基本变量的声明和定义</title>
+    <para>Python中基本的变量的声明和定义，初始化，使用</para>
+    <para>包括：整型，字符串，等等等等</para>
+    <para></para>
+
+    <sect2 xml:id="python_var_scope"><title>Python中变量的作用域</title>
+        <para><link xl:href="http://www.crifan.com/summary_python_variable_effective_scope">【整理】Python中变量的作用域(variable scope)</link></para>
+        <para></para>
+    </sect2>
+    
+    <sect2 xml:id="python_var_vs_c"><title>Python中变量与C语言中的变量对比</title>
+        <para>对于很多人，在开始学习Python之前，往往都是有了一定的C语言的基础</para>
+        <para>而对于C语言，是其他很多语言，比如C，C#等语言的基础，且其他这类语言，其语法，从宏观上来说，</para>
+        <para>尤其是变量定义和使用，都是相对很类似的</para>
+        <para>所以，为了使具有了其他语言，尤其是C语言，基础的人，更好的对于Python中的变量有个更深入的了解</para>
+        <para>此处，专门将Python中的变量，和C语言中的变量，进行对比说明：</para>
+        <para>TODO：添加对比说明</para>
+        <para></para>
+        <para></para>
+    </sect2>
+</sect1>
+
+<sect1 xml:id="python_branch"><title>Python中的分支结构</title>
+    <para>写程序，会遇到分支判断</para>
+    <para>Python也不例外</para>
+    <para>此处介绍，if/else,switch/case,try/catch等等结构的含义和写法</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_function"><title>Python中的函数</title>
+    <para>写程序 要有良好的习惯</para>
+    <para>当代码量相对多了，某些代码属于一个功能集合的时候，就应该去将这部分代码，单独组织到函数里面了</para>
+    <para>下面介绍Python中的函数的语法和调用</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="python_object_programming"><title>Python中的面向对象编程</title>
+    <para>Python中有些语法，是和面向对象编程相关的，比如：</para>
+    <para><link xl:href="http://www.crifan.com/summary_the_meaning_of_self_and___init___in_python_and_why_need_them">【整理】Python中：self和init__的含义 + 为何要有self和__init__</link></para>
+    <para>其实，这些部分的内容，如果你是和笔者类似：</para>
+    <para>只是用到Python的一些去实现一些自己需要的功能，其实可能，用不到这部分的内容</para>
+    <para>比如我之前用Python实现爬虫的时候，从头到尾，其实一直就没太涉及这部分，关于面向对象方面的内容。</para>
+    <para></para>
+</sect1>
+
+
+
+</chapter>

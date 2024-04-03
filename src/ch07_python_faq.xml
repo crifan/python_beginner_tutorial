@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch07_python_faq">
+<title>Python常见问题及解答</title>
+<abstract>
+    <para>本章主要解释在Python学习期间，常见的一些问题，探讨问题原因，给出解决答案和思路</para>
+</abstract>
+
+<qandaset>
+
+    <qandaentry xml:id="qa.run_py_but_notepad_open">
+        <question>
+            <para>在window的cmd中运行python结果却调用了文本编辑器去打开了，而不是去调用Python解析器去运行python文件</para>
+        </question>
+        <answer>
+            <para>TODO：验证下面的推断是否正确。</para>
+            <para></para>
+            <para>估计是，在安装Python时：</para>
+            <figure xml:id="fg.python_installation_choose_register_extension"><title>安装Python时选择Register Extensions</title>
+                <mediaobject>
+                    <imageobject role="html"><imagedata fileref="images/python_installation_choose_register_extension.gif" align="left"   scalefit="0" width="100%" /></imageobject>
+                    <imageobject role="fo">  <imagedata fileref="images/python_installation_choose_register_extension.gif" align="center" scalefit="1" width="100%" /> </imageobject>
+                </mediaobject>
+            </figure>
+            <para>没有选择Register Extensions，从而导致之后在cmd中运行py文件，结果被其他默认的文本编辑器去打开，而不是运行Python脚本文件了。</para>
+            <para></para>
+            <para>又或者是：</para>
+            <para>在安装其他文本编辑器，比如Notepad++，然后默认注册了py后缀</para>
+            <para>导致打开Python的py文件时，默认是调用，默认打开程序，此处为<link xl:href="http://www.crifan.com/files/doc/docbook/rec_soft_npp/release/html/rec_soft_npp.html">Notepad++</link>去打开。</para>
+        </answer>
+    </qandaentry>
+
+</qandaset>
+</chapter>

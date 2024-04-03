@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch06_python_learn_method">
+<title>继续学习Python的思路和方法</title>
+<abstract>
+    <para>本章主要去继续学习Python的时候，如何去学习，尝试教给读者一种思路，以达到授人鱼更授人以渔的目的。</para>
+    <para>这样，即使以后不看笔者的教程，具有了Python的基本知识和学习思路，也就可以靠自己继续学习了。</para>
+</abstract>
+
+<para>此处只介绍，在了解了基本的Python的开发知识之后，接下来，想要进一步开发，如何去做，如何学习。</para>
+<para>目的在于，掌握了基本的学习方法后，就可以自己去一点点学习更多细节的东西了。</para>
+
+<sect1 xml:id="how_to_learn_python"><title>如何继续深入学习Python</title>
+    <para><link xl:href="http://www.crifan.com/howto_learn_python_utilize_network_resource_manual">【整理】如何学习Python + 如何有效利用Python有关的网络资源 + 如何利用Python自带手册(Python Manual)</link></para>
+    <para>最好有个目的</para>
+    <para>即，基于一定的兴趣导向，寻找一个合适的目标</para>
+    <para>比如自己给自己找个合适的任务，要实现一定的功能，最好是能满足自己或他人的实际需求的目标</para>
+    <para>如此，继续利用相关资源，边学边写，</para>
+    <para>即一边慢慢搞清楚，需要实现相关的功能，大致思路和要做的事情有哪些，</para>
+    <para>一边将实际的思路，用真正的Python代码去实现出来</para>
+    <para>其中遇到相关的Python的基本语法，库的使用，函数的接口等等细节问题</para>
+    <para>再去参考相关的API手册说明，一点点学习并写出自己的Python代码</para>
+    <para>举例：</para>
+    <para>我之前自己就是：</para>
+    <para>由于需要实现博客搬家，把之前我自己在网易163博客，腾讯的QQ空间，百度的hi空间等等地方的，N多个博客的内容，</para>
+    <para>都要迁移到我自己的新建的个人网站中</para>
+    <para>由此：首先是找到了，真实存在的个人需求，需要去解决</para>
+    <para>然后再去学习和了解，所涉及到的技术，是和网络爬虫有关的</para>
+    <para>然后再去参考别人写网络爬虫的相关的代码</para>
+    <para>其中用到了经典的urllib等等库函数，</para>
+    <para>然后再去参考Python自带手册，一点点学习其详细的语法</para>
+    <para>最终，从无到有，一点点搞懂了：网络爬虫的实现逻辑，如何用Python实现网络爬虫，Python中和网络处理相关的库函数的使用</para>
+    <para>由此：最终算是，对于Python语言，有了更进一步的了解，明白并掌握了常见的语法，基本的库函数，基本概念的处理，尤其是字符串等方面的棘手问题</para>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="how_utilize_python_res"><title>如何利用Python相关资源</title>
+    <para></para>
+
+    <sect2 xml:id="how_utilize_python_mannual"><title>如何利用Python自带的手册</title>
+        <para>TODO：<link xl:href="http://www.crifan.com/howto_learn_python_utilize_network_resource_manual">【整理】如何学习Python + 如何有效利用Python有关的网络资源 + 如何利用Python自带手册(Python Manual)</link></para>
+        <para></para>
+    </sect2>
+    
+    <sect2 xml:id="how_utilize_python_online_res"><title>如何利用一些在线的Python资源</title>
+        <para>TODO：<link xl:href="http://www.crifan.com/howto_learn_python_utilize_network_resource_manual">【整理】如何学习Python + 如何有效利用Python有关的网络资源 + 如何利用Python自带手册(Python Manual)</link></para>
+        <para></para>
+    </sect2>
+</sect1>
+
+
+
+</chapter>

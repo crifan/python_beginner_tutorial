@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<bibliography
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="reference">
+
+<bibliomixed xml:id="ref.python_basics_zhcn">
+  <bibliosource><link xl:href="http://www.tsnc.edu.cn/default/tsnc_wgrj/doc/python/basic.htm">Python基础篇</link></bibliosource>
+  <author>Jims of 肥肥世家</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_editors_compare">
+  <bibliosource><link xl:href="http://blog.csdn.net/cserchen/article/details/7036435">python编辑器对比和推荐</link></bibliosource>
+  <author>cserchen</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.wiki_python_zh">
+  <bibliosource><link xl:href="http://zh.wikipedia.org/wiki/Python">Python - 维基百科，自由的百科全书</link></bibliosource>
+  <author>wiki</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_dev_env_cmd_ide">
+  <bibliosource><link xl:href="http://www.crifan.com/how_to_do_python_development_under_windows_environment">【整理】【多图详解】如何在Windows下开发Python：在cmd下运行Python脚本，如何使用Python Shell（command line模式和GUI模式），如何使用Python IDE</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.computer_lan_intro">
+  <bibliosource><link xl:href="http://www.crifan.com/computer_language_basic_knowledge_introduction">【整理】计算机语言基础知识介绍</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_language_intro">
+  <bibliosource><link xl:href="http://www.crifan.com/simple_intro_what_is_python_and_how_to_run_python_script">【整理】Python语言简介</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_2x_vs_3x">
+  <bibliosource><link xl:href="http://www.crifan.com/summary_the_difference_between_python2_and_python3">【整理】总结Python2(Python 2.x版本）和Python3（Python 3.x版本）之间的区别</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.crifan_rec_npp">
+  <bibliosource><link xl:href="http://www.crifan.com/files/doc/docbook/rec_soft_npp/release/html/rec_soft_npp.html">【crifan推荐】轻量级文本编辑器，Notepad最佳替代品：Notepad++</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.windows_cmd_intro">
+  <bibliosource><link xl:href="http://www.crifan.com/files/doc/docbook/soft_dev_basic/release/html/soft_dev_basic.html#win_cmd">Windows的命令行工具: cmd</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_graphics_libs">
+  <bibliosource><link xl:href="http://www.crifan.com/summary_python_graphics_gui_libs_packages/">【整理】Python中的图形库</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.find_real_link_for_google_search_link">
+  <bibliosource><link xl:href="http://www.crifan.com/find_real_link_from_google_link_when_failed_open_via_google/">【已解决】在用google搜索出来的链接无法打开的情况下，如何找到该链接的真实地址</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.what_is_ide">
+  <bibliosource><link xl:href="http://www.crifan.com/what_is_ide">【整理】什么是IDE</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_various_ide_env_comparation">
+  <bibliosource><link xl:href="http://www.crifan.com/summary_common_python_ide_pyscripter_ulipad_eclipse_pydev_eric">【整理】各种Python的IDE(集成开发环境)的总结和对比</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_tkinter_module">
+  <bibliosource><link xl:href="http://www.crifan.com/try_python_tkinter_module/">【记录】折腾Python中的Tkinter</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.try_python_ide_pyscripter">
+  <bibliosource><link xl:href="http://www.crifan.com/try_with_python_ide_pyscripter/">【记录】使用Python的IDE：PyScripter</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.python_name_main">
+  <bibliosource><link xl:href="http://www.crifan.com/python_detailed_explain_about___name___and___main__/">【整理】Python中的__name__和__main__含义详解</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed xml:id="ref.eclipse_pydev">
+  <bibliosource><link xl:href="http://www.crifan.com/try_with_python_ide_eclipse_pydev">Eclipse+PyDev</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+</bibliography>

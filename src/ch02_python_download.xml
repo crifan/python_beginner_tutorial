@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE chapter [
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" "http://www.crifan.com/files/res/docbook/entity/crl.ent">
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch02_python_download">
+<title>选择并下载合适的版本的Python</title>
+<abstract>
+    <para>本章主要讲解，在开始Python学习之前，如何根据自己的当前的操作系统的版本，去选择和下载合适的版本的Python。</para>
+    <para></para>
+</abstract>
+
+<para>开发Python之前，肯定是要先搞清楚，如何下载对应的Python。</para>
+<para>本来下载一个东西是很简单的事情，但是由于Python有很多版本方面的事情，所以需要搞清楚很多基本逻辑和概念，才知道自己需要下载哪个版本的。</para>
+<para></para>
+<para>待整理：</para>
+<para><link xl:href="http://www.crifan.com/tutorial_how_to_download_latest_misc_2_x_3_x_version_python">【教程】如何下载最新版的，各种版本的，包括Python 2.x和Python 3.x的Python</link></para>
+
+<sect1 xml:id="why_note_python_version"><title>为何要注意选择合适版本的Python</title>
+    <para>因为，如果选择错误的，不合适的版本的Python，</para>
+    <para>则很可能导致后续学习Python和开发Python时，会遇到问题和错误。</para>
+    <para>比如，一些相对常见，由于版本选择错误而出现的问题有：</para>
+    <itemizedlist>
+        <listitem>由于选择了Python 3.x版本，但是参考别人的Python 2.x的代码，结果会出现语法错误
+            <para>其中最最常见的，有两个经典的例子：</para>
+            <itemizedlist>
+                <listitem>printf的语法不同而导致出错
+                    <para></para>
+                </listitem>
+                <listitem>TODO：好像有个string还是其他什么的，版本2.x和版本3.x是不同的</listitem>
+            </itemizedlist>
+            <para>当然，出处之外，Python 2.x和Python 3.x还有其他更多语法上面的不同，再次就不一一细说了。</para>
+        </listitem>
+        <listitem>x64的系统中安装了x86的库，导致后续使用时无法使用
+            <para>TODO：找到对应的x64库的错误的例子</para>
+            <para></para>
+        </listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+
+<sect1 xml:id="how_choose_python_version"><title>如何选择正确版本的Python</title>
+    <sect2 xml:id="clear_platform_info"><title>明确当前所处平台版本的信息</title>
+        <para>搞清楚当前操作系统的具体信息</para>
+        <para>尤其是什么系统，什么版本</para>
+        <para>以便于后续选择与当前系统所匹配的，最合适的版本</para>
+        <para></para>
+    </sect2>
+
+    <sect2 xml:id="choose_avaliable_download_src"><title>选择可用和速度快的下载源</title>
+        <para>Python官网中的下载页面：</para>
+        <para><link xl:href="http://www.python.org/ftp/python/" /></para>
+        <para><link xl:href="http://python.org/getit/releases/" /></para>
+        <para>但是Python官网，不是太稳定：对于国内开发者来说，时不时会出现无法访问的情况。</para>
+        <para>后来找到一个Python官网的国内的镜像：</para>
+        <para><link xl:href="http://mirrors.sohu.com/python/" /></para>
+        <para>速度相对来说，蛮快的。</para>
+        <para>如果发现Python官网无法访问和下载的话，可以去上述镜像去下载。</para>
+        <para></para>
+    </sect2>
+
+    <sect2 xml:id="chooise_right_version_python"><title>选择合适的版本的Python</title>
+        <para>接下来，就是去选择，合适自己的，与自己当前的系统所匹配的版本的Python，然后再去下载。</para>
+        <para>什么叫合适自己的版本的Python呢？</para>
+        <para>那就是：</para>
+        <para>明确了之前介绍的，Python有2.x和3.x的区别后，选择对应的2.x或3.x后</para>
+        <para>再根据当前自己系统，下载对应的版本的Python</para>
+        <para></para>
+        <para></para>
+    </sect2>
+</sect1>
+
+
+</chapter>
